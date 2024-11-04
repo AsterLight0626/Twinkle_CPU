@@ -31,7 +31,7 @@ where $s$ is the binary separation, $q$ is the mass ratio, $y_1$ is the horizont
 
 如果您在研究工作中使用了Twinkle（或Twinkle的一部分），请引用我们的文章：Wang, S. et al., 2024, in prep.
 
-如果您将Twinkle（或Twinkle的一部分）整合到您的代码中，请您在README文件（或等效文件）中指明这一点。内容包括GitHub链接 (https://github.com/AsterLight0626/Twinkle)，并要求用户引用我们的论文：Wang, S. et al., 2024, in prep.
+如果您将Twinkle（或Twinkle的一部分）整合到您的代码中，请您在README文件（或等效文件）中指明这一点。内容包括GitHub链接 (https://github.com/AsterLight0626/Twinkle) ，并要求用户引用我们的论文：Wang, S. et al., 2024, in prep.
 
 
 # 使用教程 

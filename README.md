@@ -6,7 +6,7 @@
 # English
 
 # Twinkle_CPU
-The CPU version of [Twinkle](https://github.com/AsterLight0626/Twinkle), giving out exactly the same results.
+The CPU version of [Twinkle](https://github.com/AsterLight0626/Twinkle), producing exactly the same results.
 
 If you use Twinkle (or part of Twinkle) in your research work, we request citing our paper: Wang, S. et al., 2024, in prep.
 

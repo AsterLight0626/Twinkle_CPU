@@ -43,4 +43,4 @@ where $s$ is the binary separation, $q$ is the mass ratio, $y_1$ is the horizont
 ```
 Magnification = LittleStar.Mag(s, q, y1, y2, Rs);
 ```
-其中 $s$ 是透镜体之间的距离，$q$ 是透镜体质量比，$y1$ 是源中心的横坐标，$y2$ 是源中心的纵坐标，$Rs$ 是源的半径（由 Einstein Radius 归一化）。
+其中 $s$ 是透镜体之间的距离，$q$ 是透镜体质量比，$y_1$ 是源中心的横坐标，$y_2$ 是源中心的纵坐标，$Rs$ 是源的半径（由 Einstein Radius 归一化）。

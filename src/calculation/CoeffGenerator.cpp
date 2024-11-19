@@ -539,42 +539,42 @@ template _Host_Device double Jacobi(const complex_t<double>& z, const complex_t<
 // template _Host_Device double PolyCoeffVB1(const double s, const double q, const complex_t<double>& zeta_M, complex_t<double>* coeffs_out);
 
 
-// template <isFloating f_T>
-// _Host_Device f_T PolyCoeffVB1(const f_T s, const f_T m1, const f_T m2, const complex_t<f_T>& zeta_M, complex_t<f_T>* coeffs_out)
-// {
-// 	// s>0, 0<q<=1
-// 	// f_T m1,m2,a;
-// 	f_T a;
-// 	complex_t<f_T> temp[3],y,yc,zeta_c;
-// 	f_T moving;			// moving 总是正数
+template <isFloating f_T>
+_Host_Device f_T PolyCoeffVB1(const f_T s, const f_T m1, const f_T m2, const complex_t<f_T>& zeta_M, complex_t<f_T>* coeffs_out)
+{
+	// s>0, 0<q<=1
+	// f_T m1,m2,a;
+	f_T a;
+	complex_t<f_T> temp[3],y,yc,zeta_c;
+	f_T moving;			// moving 总是正数
 
-// 	// m1 = 1.0 / (1.0 + q);
-// 	// m2 = q*m1;
-// 	// a = -s;
-// 	moving = s*m1;
-// 	y = zeta_M - moving;
-// 	yc = conj(y);
+	// m1 = 1.0 / (1.0 + q);
+	// m2 = q*m1;
+	// a = -s;
+	moving = s*m1;
+	y = zeta_M - moving;
+	yc = conj(y);
 
-// 	zeta_c = conj(zeta_M);
+	zeta_c = conj(zeta_M);
 	
 
 
-// 	temp[0] = m2*s;
-// 	temp[1] = zeta_c + temp[0];				// zeta_c + m2*s = zeta_c - z_1		source to m1    ( yc - a ) or ( yc + s )
-// 	temp[2] = (1-s*s) + s*(temp[0] + zeta_c);
+	temp[0] = m2*s;
+	temp[1] = zeta_c + temp[0];				// zeta_c + m2*s = zeta_c - z_1		source to m1    ( yc - a ) or ( yc + s )
+	temp[2] = (1-s*s) + s*(temp[0] + zeta_c);
 
-// 	coeffs_out[5] = - yc * temp[1];
-// 	coeffs_out[4] = (norm(y) -f_T(1.) - f_T(2.)*s*yc ) * temp[1] + temp[0];
-// 	coeffs_out[3] = (f_T(2.)*y-s) * (  temp[2]*temp[1]  + complex_t<f_T>(f_T(0.),2.*imag(y)) - m2*s ) + complex_t<f_T>(f_T(0.),4.*imag(y)) * (m2*s - y);
-// 	coeffs_out[2] = zeta_M + s * f_T(2.)*real(y*temp[1]) + temp[0] * ( f_T(2.)*norm(y) + y*s - f_T(2.)*s*yc ) + s*s*norm(y)*temp[1];
-// 	coeffs_out[1] = temp[0] * ( (s + f_T(2.)*y) * temp[2] + s * (complex_t<f_T>(f_T(0.),f_T(2.)*imag(y)*s) - m2)  );
-// 	coeffs_out[0] = temp[0] * temp[0] * y;
+	coeffs_out[5] = - yc * temp[1];
+	coeffs_out[4] = (norm(y) -f_T(1.) - f_T(2.)*s*yc ) * temp[1] + temp[0];
+	coeffs_out[3] = (f_T(2.)*y-s) * (  temp[2]*temp[1]  + complex_t<f_T>(f_T(0.),2.*imag(y)) - m2*s ) + complex_t<f_T>(f_T(0.),4.*imag(y)) * (m2*s - y);
+	coeffs_out[2] = zeta_M + s * f_T(2.)*real(y*temp[1]) + temp[0] * ( f_T(2.)*norm(y) + y*s - f_T(2.)*s*yc ) + s*s*norm(y)*temp[1];
+	coeffs_out[1] = temp[0] * ( (s + f_T(2.)*y) * temp[2] + s * (complex_t<f_T>(f_T(0.),f_T(2.)*imag(y)*s) - m2)  );
+	coeffs_out[0] = temp[0] * temp[0] * y;
 
-// 	return moving;
+	return moving;
 
-// }
-// template _Host_Device float PolyCoeffVB1(const float s, const float m1, const float m2, const complex_t<float>& zeta_M, complex_t<float>* coeffs_out);
-// template _Host_Device double PolyCoeffVB1(const double s, const double m1, const double m2, const complex_t<double>& zeta_M, complex_t<double>* coeffs_out);
+}
+template _Host_Device float PolyCoeffVB1(const float s, const float m1, const float m2, const complex_t<float>& zeta_M, complex_t<float>* coeffs_out);
+template _Host_Device double PolyCoeffVB1(const double s, const double m1, const double m2, const complex_t<double>& zeta_M, complex_t<double>* coeffs_out);
 
 
 template <isFloating f_T>

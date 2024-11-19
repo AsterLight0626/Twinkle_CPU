@@ -8,14 +8,18 @@ int main()
     Twinkle<double> LittleStar;
     LittleStar.malloc(0);
 
-    LittleStar.RELTOL = 1e-2;
+    LittleStar.RELTOL = 1e-5;
 
 
     // single point
     double Magnification;
     // LittleStar.Mag(s, q, y1, y2, Rs);
-    Magnification = LittleStar.Mag(0.437613333, 0.125,-0.2411797387902984,-0.1529013886069155, 1.939366667e-2);
+    Magnification = LittleStar.Mag(0.5, 1e-6,-1.499934,0.0035, 1e-4);
     printf("Magnification = %.12f\n",Magnification);
+
+
+
+    LittleStar.writeto("./");
 
     // FREE
     LittleStar.free();   

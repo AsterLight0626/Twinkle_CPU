@@ -66,8 +66,8 @@ _Host_Device f_T Jacobi(const complex_t<f_T>& z, const complex_t<f_T>* params);
 // template <isFloating f_T>
 // _Host_Device f_T PolyCoeffVB1(const f_T s, const f_T q, const complex_t<f_T>& zeta_M, complex_t<f_T>* coeffs_out);
 
-// template <isFloating f_T>
-// _Host_Device f_T PolyCoeffVB1(const f_T s, const f_T m1, const f_T m2, const complex_t<f_T>& zeta_M, complex_t<f_T>* coeffs_out);
+template <isFloating f_T>
+_Host_Device f_T PolyCoeffVB1(const f_T s, const f_T m1, const f_T m2, const complex_t<f_T>& zeta_M, complex_t<f_T>* coeffs_out);
 
 template <isFloating f_T>
 _Host_Device f_T PolyCoeffTwinkle(const f_T s, const f_T m1, const f_T m2, const complex_t<f_T>& zeta_M, complex_t<f_T>* coeffs_out);

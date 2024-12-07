@@ -19,7 +19,7 @@ MPI        ?= 0
 CFLAGS_CMD :=
 INCDEP     :=
 CC     := g++
-CFLAGS := -std=c++17 -O3 $(CFLAGS_CMD)
+CFLAGS := -std=c++17 -O2 $(CFLAGS_CMD)
 LIB    := $(CFLAGS)
 INC    := 
 # ifeq ($(ARCH),CUDA)

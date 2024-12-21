@@ -10,7 +10,7 @@ The CPU version of [Twinkle](https://github.com/AsterLight0626/Twinkle), produci
 
 If you use Twinkle (or part of Twinkle) in your research work, we request citing our paper: Wang, S. et al., 2024, in prep.
 
-If you incorporate Twinkle (or part of Twinkle) in your code, we request specifying it in the README file (or equivalent), including the GitHub link ( https://github.com/AsterLight0626/Twinkle ) and asking the user to cite our paper: Wang, S. et al., 2024, in prep.
+If you incorporate Twinkle (or part of Twinkle) in your code, we request specifying it in the README file (or equivalent), including the GitHub link ( https://github.com/AsterLight0626/Twinkle ) and asking the user to cite our paper: [Wang, S. et al., 2024](https://doi.org/10.3847/1538-4365/ad9b8d).
 
 # Tutorial
 

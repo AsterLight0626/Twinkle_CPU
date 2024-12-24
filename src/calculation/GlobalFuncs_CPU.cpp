@@ -1458,7 +1458,11 @@ void SumArea3(int blockIdx_x, int blockDim, int* srclist, src_ext_t<f_T>* srcs, 
                 srcs[srcidx].margin_pts[temp0].deltaS_Err[temp_j] = tempS;
             }
         }
-
+	    
+        if(fabs(deltaS[0]/srcs[srcidx].Area) < RELTOL*1e-2 )
+        {
+            srcs[srcidx].SolveSucceed = true;
+        }
         Area = deltaS[0] + srcs[srcidx].Area;
         Error = Err[0] + srcs[srcidx].Err_A;
         tempS = srcs[srcidx].src_area;
